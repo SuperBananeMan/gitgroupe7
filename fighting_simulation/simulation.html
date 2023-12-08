@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Buttons</title>
+    <style>
+        body {
+            background-color: gray;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #line {
+            position: absolute;
+            width: 100%;
+            bottom: 50px;
+            border-top: 2px solid #000;
+        }
+
+        .button {
+            position: absolute;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #buttonLeft {
+            top: 10px;
+            left: 10px;
+        }
+
+        #buttonRight {
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div class="button" id="buttonLeft" onclick="addCharacter('A')">A</div>
+        <div class="button" id="buttonRight" onclick="addCharacter('C')">C</div>
+
+        <div id="line"></div>
+    </div>
+
+    <script>
+        function addCharacter(character) {
+            // Get the line element
+            var line = document.getElementById('line');
+
+            // Create a span element with the selected character
+            var span = document.createElement('span');
+            span.innerHTML = character;
+
+            // Append the span to the line
+            line.appendChild(span);
+        }
+    </script>
+
+</body>
+</html>
