@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Select Box Example</h1>
+
+    <label>
+        <input type="radio" name="selection" value="option1"> Option 1
+    </label>
+
+    <label>
+        <input type="radio" name="selection" value="option2"> Option 2
+    </label>
+
+    <button onclick="submitSelection()">Submit</button>
+
+    <script>
+        function submitSelection() {
+            // Retrieve the selected option
+            var selectedOption = document.querySelector('input[name="selection"]:checked');
+
+            // Check if an option is selected
+            if (selectedOption) {
+                alert("Selected option: " + selectedOption.value);
+            } else {
+                alert("Please select an option");
+            }
+        }
+    </script>
+</body>
+</html>
